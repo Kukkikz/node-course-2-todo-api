@@ -302,7 +302,7 @@ describe('POST /users/login', () => {
             })
             .expect(400)
             .expect((res) => {
-                expect(res.headers['x-auth']).toBeFalsy(); //toBeTruthy == toExist
+                expect(res.headers['x-auth']).toBeFalsy(); //toBeFalsy == toNotExist
             })
             .end((err, res) => {
                 if(err) {
@@ -315,4 +315,4 @@ describe('POST /users/login', () => {
                 }).catch((e) => done(e));
             })
     });
-})
+});
